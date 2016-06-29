@@ -13,6 +13,7 @@ class LocationSearchTable : UITableViewController {
     
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil
+    var handleMapSearchDelegate:HandleMapSearch? = nil
     
     //This method converts the placemark to a custom address format like: “4 Melrose Place, Washington DC”.
     func parseAddress(selectedItem:MKPlacemark) -> String {
@@ -71,5 +72,14 @@ extension LocationSearchTable {
         cell.textLabel?.text = selectedItem.name
         cell.detailTextLabel?.text = parseAddress(selectedItem)
         return cell
+    }
+}
+
+//This class extension groups UITableViewDelegate methods together
+extension LocationSearchTable {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedItem = matchingItems[indexPath.row].placemark
+        handleMapSearchDelegate?.dropPinZoomIn(selectedItem)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
