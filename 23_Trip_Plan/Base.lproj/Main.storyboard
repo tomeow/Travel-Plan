@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
@@ -17,14 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-Ka-jTb">
-                                <rect key="frame" x="0.0" y="59" width="600" height="534"/>
-                            </mapView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HvM-6f-sbN">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <navigationBar contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HvM-6f-sbN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="Rsu-VT-NCc">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="h94-hk-g2j">
+                                    <navigationItem title="Map" id="Rsu-VT-NCc">
+                                        <barButtonItem key="rightBarButtonItem" width="1" systemItem="search" id="h94-hk-g2j">
                                             <connections>
                                                 <action selector="searchButton:" destination="BYZ-38-t0r" id="eYt-T1-mqe"/>
                                             </connections>
@@ -32,8 +30,20 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-Ka-jTb">
+                                <rect key="frame" x="20" y="0.0" width="580" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SRl-E7-wgQ"/>
+                                </connections>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Ux-Ka-jTb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CeE-Iu-jsP"/>
+                            <constraint firstItem="1Ux-Ka-jTb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="O8W-w0-4yi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ux-Ka-jTb" secondAttribute="trailing" constant="-20" id="Rrz-Qa-ap1"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1Ux-Ka-jTb" secondAttribute="bottom" id="ZT3-iv-vOU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="map" destination="1Ux-Ka-jTb" id="Hre-6B-LpY"/>
@@ -46,7 +56,7 @@
         <!--Places to Visit-->
         <scene sceneID="c9U-Fa-SWh">
             <objects>
-                <tableViewController id="Szc-Wd-fxt" customClass="TableViewController" customModule="_3_Trip_Plan" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="Szc-Wd-fxt" customClass="LocationSearchTable" customModule="_3_Trip_Plan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pfy-Ef-uNl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
