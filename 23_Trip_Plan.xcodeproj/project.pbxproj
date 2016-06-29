@@ -12,6 +12,8 @@
 		3B0EAD3C1D22314200E26DB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EAD3A1D22314200E26DB9 /* Main.storyboard */; };
 		3B0EAD3E1D22314200E26DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EAD3D1D22314200E26DB9 /* Assets.xcassets */; };
 		3B0EAD411D22314200E26DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0EAD3F1D22314200E26DB9 /* LaunchScreen.storyboard */; };
+		3B0EAD491D2236E900E26DB9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0EAD481D2236E900E26DB9 /* CoreData.framework */; };
+		3B0EAD4D1D235B7200E26DB9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0EAD4C1D235B7200E26DB9 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3B0EAD3D1D22314200E26DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0EAD401D22314200E26DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0EAD421D22314200E26DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0EAD481D2236E900E26DB9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3B0EAD4C1D235B7200E26DB9 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = ../TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0EAD491D2236E900E26DB9 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,7 @@
 		3B0EAD2A1D22314200E26DB9 = {
 			isa = PBXGroup;
 			children = (
+				3B0EAD481D2236E900E26DB9 /* CoreData.framework */,
 				3B0EAD351D22314200E26DB9 /* 23_Trip_Plan */,
 				3B0EAD341D22314200E26DB9 /* Products */,
 			);
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				3B0EAD361D22314200E26DB9 /* AppDelegate.swift */,
+				3B0EAD4C1D235B7200E26DB9 /* TableViewController.swift */,
 				3B0EAD381D22314200E26DB9 /* ViewController.swift */,
 				3B0EAD3A1D22314200E26DB9 /* Main.storyboard */,
 				3B0EAD3D1D22314200E26DB9 /* Assets.xcassets */,
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0EAD391D22314200E26DB9 /* ViewController.swift in Sources */,
+				3B0EAD4D1D235B7200E26DB9 /* TableViewController.swift in Sources */,
 				3B0EAD371D22314200E26DB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +296,7 @@
 				3B0EAD471D22314200E26DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
